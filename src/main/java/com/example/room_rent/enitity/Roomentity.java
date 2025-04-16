@@ -29,7 +29,7 @@ public class Roomentity {
     private Integer maxoccupancy;
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "owner_id")
-    @JsonBackReference //to avoid infinite recursion(this matches to user and in user it again matches to room and goes on)
+    // @JsonBackReference //to avoid infinite recursion(this matches to user and in user it again matches to room and goes on)
     private Userentity owner;
     public Integer getRoomid() {
         return roomid;
